@@ -3,9 +3,15 @@ const db=require('./database.js');
 
 const Question=db.define(
   'questions',
-  {
-    type: Sequelize.TEXT,
-    form_id: Sequelize.INTEGER
+  formID: {
+    type: Sequelize.INTEGER,
+    allowNull:false
+  },
+  question:{
+    type:Sequelize.STRING,
+    allowNull:false
   },
   { timestamps:false }
 );
+
+module.exports = Question
