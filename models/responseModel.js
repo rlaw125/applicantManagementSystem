@@ -1,8 +1,8 @@
 const Sequelize=require('sequelize');
 const db=require('./database.js');
 
-const Response=db.define(
-  'responses',
+const Response=db.define('responses',
+{
   questionID:{
     type: Sequelize.INTEGER,
     allowNull:false
@@ -14,7 +14,8 @@ const Response=db.define(
   text:{
     type:Sequelize.TEXT,
     allowNull:false
-  },
+  }
+},
   { timestamps: false }
 );
 

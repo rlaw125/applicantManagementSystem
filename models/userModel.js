@@ -1,8 +1,8 @@
 const Sequelize=require('sequelize');
-const db=require('database.js');
+const db=require('./database.js');
 
-const User=db.define(
-  'users',
+const User=db.define('users',
+{
    name: {
     type: Sequelize.TEXT,
     allowNull:false
@@ -10,7 +10,8 @@ const User=db.define(
   password: {
     type: Sequelize.TEXT,
     allowNull:false
-  },
+  }
+},
   { timestamps: false }
 );
 
