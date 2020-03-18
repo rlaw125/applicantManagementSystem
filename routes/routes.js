@@ -1,7 +1,7 @@
 module.exports=function(app, db, form, question, response, user){
 
   app.get('/', (req,res)=>{
-    console.log(req);
+    console.log(req.sessionID);
     res.send("You're logged in");
   });
 
