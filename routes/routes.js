@@ -7,15 +7,18 @@ module.exports=function(app, db, form, question, response, user){
 
   app.get('/admin', (req,res)=>{
     // after admin gets logged in and there is a dashboard
+    // create middleware that ensures user is properly authenticated because navigating to this page.
     res.send('Here are your users.')
   });
 
   app.get('/forms', (req,res)=>{
+    // admin can see the forms created and available. Pull form data created from models.
     res.send('You are at the form route');
   });
 
   app.get('/applicants', (req, res)=>{
     // where you get to see the list of applicants and status
+    // pull list of applicants after you are logged in.
     res.send('You are at the applicant route');
   });
 
