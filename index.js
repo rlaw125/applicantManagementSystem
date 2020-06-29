@@ -15,6 +15,7 @@ const User=require('./models/userModel.js');
 let port=process.env.PORT || 3000;
 
 app.use(session({
+  // remove session secret to environment variable
   secret:'24cc-4d44-wrrq38s',
   resave:true,
   saveUninitialized:true
